@@ -23,12 +23,17 @@ class PicGen extends Component {
       <div>
         <h1>Random image generator</h1>
         <ul>
-          {this.state.pictures.map(pics => {
+          {this.state.pictures.map((pics, i) => {
             return (
               <div>
-                <li key={pics.id}>
-                  <img src={pics.url} />
-                </li>
+                <ul>
+                  <li key={i}>
+                    <img
+                      src={pics.download_url}
+                      style={{ width: '5rem' }}
+                    ></img>
+                  </li>
+                </ul>
               </div>
             )
           })}
